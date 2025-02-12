@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f8e8e8; /* Soft blush pink */
+    font-family: 'Georgia', serif; /* Elegant and timeless */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+/* Landing Section */
+.landing {
+    text-align: center;
+    padding: 30px;
+}
+
+/* Affirmations Header */
+.top {
+    font-size: 60px;
+    color: #d27a8d; /* Soft rose-pink */
+    font-weight: lighter;
+    letter-spacing: 2px;
+    text-transform: lowercase;
+    margin-bottom: 15px;
+    font-family: 'Georgia', serif; /* Elegant, feminine font */
+}
+
+.bottom {
+    font-size: 22px;
+    color: #a39c9d; /* Soft dusty mauve */
+    font-weight: 300;
+    margin-bottom: 40px;
+}
+
+/* Affirmations Container */
+.affirmations-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 0 20px;
+    margin-bottom: 40px;
+}
+
+/* Individual Affirmation Box */
+.affirmation {
+    background-color: #f4a6b3; /* Soft pink */
+    padding: 20px;
+    font-size: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    color: white;
+    font-weight: 300;
+    font-style: italic;
+    transition: 0.3s ease-in-out;
+}
+
+.affirmation:hover {
+    background-color: #d88a9b; /* Slightly deeper pink */
+    transform: translateY(-5px);
+}
+
+/* Button Styling */
+.landing a {
+    color: white;
+    text-decoration: none;
+    background-color: #f4a6b3; /* Soft pink */
+    padding: 12px 40px;
+    font-size: 22px;
+    border-radius: 50px;
+    border: solid 2px rgba(255, 255, 255, 0.7);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    transition: 0.3s ease-in-out;
+    font-weight: 300;
+    letter-spacing: 1px;
+    font-style: italic;
+}
+
+.landing a:hover {
+    background-color: #d88a9b; /* Slightly deeper pink */
+    transform: translateY(-3px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+}

@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Ballet:opsz@16..72&family=Special+Elite&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f8e8e8; /* Soft pink background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    flex-direction: column;
+}
+
+/* Title */
+.title {
+    font-family: 'Ballet', cursive;
+    font-size: 50px;
+    color: #d04a5c;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Main Layout */
+.main {
+    display: flex;
+    width: 90%;
+    max-width: 1200px;
+    gap: 20px;
+}
+
+/* Left Side - Scrollable Letter */
+.left-side {
+    flex: 1;
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Special Elite', cursive; /* Typewriter effect */
+    font-size: 18px;
+    line-height: 1.8;
+    color: #333;
+
+    /* Enable scrolling */
+    max-height: 400px; /* Adjust if needed */
+    overflow-y: auto;
+}
+
+/* Spacing between paragraphs */
+.left-side p {
+    margin-bottom: 15px;
+}
+
+/* Scrollbar Styling */
+.left-side::-webkit-scrollbar {
+    width: 8px;
+}
+
+.left-side::-webkit-scrollbar-thumb {
+    background: #f4a6b3; /* Soft pink scrollbar */
+    border-radius: 10px;
+}
+
+.left-side::-webkit-scrollbar-track {
+    background: #fceef1; /* Light pink background */
+}
+
+/* Right Side - Image Gallery */
+.right-side {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+a {
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    color: white;
+    text-decoration: none;
+    background-color: #f4a6b3; /* Soft pink */
+    padding: 12px 40px;
+    font-size: 22px;
+    border-radius: 50px;
+    border: solid 2px rgba(255, 255, 255, 0.7);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    transition: 0.3s ease-in-out;
+    font-weight: 300;
+    letter-spacing: 1px;
+    font-style: italic;
+}
+
+a:hover {
+    background-color: #d88a9b; /* Slightly deeper pink */
+    transform: translateY(-3px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+}
