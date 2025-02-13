@@ -6,33 +6,36 @@
 
 body {
     background-color: #f8e8e8; /* Soft blush pink */
-    font-family: 'Georgia', serif; /* Elegant and timeless */
+    font-family: 'Georgia', serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     flex-direction: column;
+    text-align: center;
+    padding: 20px;
 }
 
 /* Landing Section */
 .landing {
+    width: 100%;
+    max-width: 800px;
     text-align: center;
-    padding: 30px;
+    padding: 30px 20px;
 }
 
 /* Affirmations Header */
 .top {
-    font-size: 60px;
+    font-size: clamp(36px, 6vw, 60px);
     color: #d27a8d; /* Soft rose-pink */
     font-weight: lighter;
     letter-spacing: 2px;
     text-transform: lowercase;
     margin-bottom: 15px;
-    font-family: 'Georgia', serif; /* Elegant, feminine font */
 }
 
 .bottom {
-    font-size: 22px;
+    font-size: clamp(18px, 3vw, 22px);
     color: #a39c9d; /* Soft dusty mauve */
     font-weight: 300;
     margin-bottom: 40px;
@@ -41,17 +44,18 @@ body {
 /* Affirmations Container */
 .affirmations-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 0 20px;
-    margin-bottom: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto 40px;
 }
 
 /* Individual Affirmation Box */
 .affirmation {
-    background-color: #f4a6b3; /* Soft pink */
-    padding: 20px;
-    font-size: 20px;
+    background-color: #f4a6b3;
+    padding: 18px;
+    font-size: clamp(16px, 2vw, 20px);
     border-radius: 12px;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
     color: white;
@@ -61,7 +65,7 @@ body {
 }
 
 .affirmation:hover {
-    background-color: #d88a9b; /* Slightly deeper pink */
+    background-color: #d88a9b;
     transform: translateY(-5px);
 }
 
@@ -69,9 +73,9 @@ body {
 .landing a {
     color: white;
     text-decoration: none;
-    background-color: #f4a6b3; /* Soft pink */
+    background-color: #f4a6b3;
     padding: 12px 40px;
-    font-size: 22px;
+    font-size: clamp(18px, 2.5vw, 22px);
     border-radius: 50px;
     border: solid 2px rgba(255, 255, 255, 0.7);
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
@@ -83,7 +87,23 @@ body {
 }
 
 .landing a:hover {
-    background-color: #d88a9b; /* Slightly deeper pink */
+    background-color: #d88a9b;
     transform: translateY(-3px);
     box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Mobile Layout Fixes */
+@media (max-width: 768px) {
+    .affirmations-container {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 10px;
+    }
+
+    .affirmation {
+        padding: 16px;
+    }
+
+    .top {
+        font-size: 40px;
+    }
 }
